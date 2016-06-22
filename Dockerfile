@@ -18,3 +18,10 @@ RUN mkdir -p \
 EXPOSE 8888 55555
 
 VOLUME ["/data"]
+
+WORKDIR /usr/bin/btsync/
+
+# add the start script
+ADD start-btsync /usr/bin/start-btsync
+RUN chmod +x /usr/bin/start-btsync
+ENTRYPOINT ["/bin/bash"]
