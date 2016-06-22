@@ -2,10 +2,10 @@ FROM ubuntu:14.04
 MAINTAINER Scott Stamile <scottstamile@gmail.com>
 
 # Download btsync
-ADD https://download-cdn.getsync.com/stable/linux-x64/BitTorrent-Sync_x64.tar.gz /root/btsync/btsync.tar.gz
+ADD https://download-cdn.getsync.com/stable/linux-x64/BitTorrent-Sync_x64.tar.gz /root/btsync.tar.gz
 
 # untar downloaded btsync and remove original
-RUN tar -xzvf /root/btsync/btsync.tar.gz -C /root/btsync/ \
+RUN tar -xzvf /usr/bin/btsync/btsync.tar.gz btsync -C /usr/bin/ \
 	&& rm /root/btsync/btsync.tar.gz
 
 # Make Directory's
