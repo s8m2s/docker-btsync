@@ -15,7 +15,7 @@ RUN mkdir -p \
 	/data
 
 # PORTS!
-EXPOSE 8888 55555
+EXPOSE 8888 5555 3838
 
 VOLUME ["/data"]
 
