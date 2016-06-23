@@ -10,9 +10,10 @@ RUN tar -xzvf /tmp/btsync.tar.gz -C /usr/bin/ btsync \
 
 # Make Directory's
 RUN mkdir -p \
+	/data \
 	/btsync/.sync \
-	/var/run/btsync \
-	/data
+	/var/run/btsync
+
 
 # PORTS!
 EXPOSE 8888 5555 3838
