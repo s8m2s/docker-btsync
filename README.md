@@ -7,7 +7,7 @@ In progreess
 ## Run the Container
 
     $ docker run -it --rm --name="BTSync" \
-        -v ~/.docker_data/docker-btsync/conf:/data \
+        -v ~/.docker_data/docker-btsync/data:/data \
         --net="bridge" \
         -p 8888:8888/tcp \
         -p 5555:5555/tcp \
