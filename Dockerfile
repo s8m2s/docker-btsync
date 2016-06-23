@@ -20,9 +20,9 @@ EXPOSE 8888 5555 3838
 
 VOLUME ["/data"]
 
-WORKDIR /usr/bin/btsync/
+# WORKDIR /usr/bin/btsync/
 
 # add the start script
-ADD start-btsync /usr/bin/start-btsync
-RUN chmod +x /usr/bin/start-btsync
-ENTRYPOINT ["/bin/bash"]
+# ADD start-btsync /usr/bin/start-btsync
+# RUN chmod +x /usr/bin/start-btsync
+# ENTRYPOINT ["/bin/bash"]
