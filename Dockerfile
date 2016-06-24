@@ -10,6 +10,7 @@ RUN tar -xzvf /tmp/btsync.tar.gz -C /usr/bin/ btsync \
 
 # Make Directory's
 RUN mkdir -p \
+	/btsync/ \
 	/data/.sync \
 	/var/run/btsync
 
@@ -19,10 +20,12 @@ EXPOSE 8888 3838
 
 VOLUME ["/data"]
 
-# WORKDIR /usr/bin/btsync/
+ADD btsync.conf /btsync/
 
 # add the start script
 # ADD start-btsync /usr/bin/start-btsync
 # RUN chmod +x /usr/bin/start-btsync
 # ENTRYPOINT ["/bin/bash"]
-CMD ["btsync", "--config", "/data/btsync.conf", "--nodaemon"]
+CMD ["btsync", "--config", "/data/btsync.conf", "--nodaemon"]# Starts btsync using the btsync.conf file we just created
+# Starts btsync using the btsync.conf file we just created
+ENTRYPOINT ["btsync", "--config", "/btsync/btsync.conf", "--nodaemon"]
