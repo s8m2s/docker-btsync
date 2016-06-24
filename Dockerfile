@@ -25,3 +25,4 @@ VOLUME ["/data"]
 # ADD start-btsync /usr/bin/start-btsync
 # RUN chmod +x /usr/bin/start-btsync
 # ENTRYPOINT ["/bin/bash"]
+CMD ["btsync", "--config", "/data/btsync.conf", "--nodaemon"]
