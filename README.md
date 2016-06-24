@@ -1,25 +1,13 @@
 # BTSync Dockerfile
-Runs btsync within a docker contaner using ubuntu 14.0.4 as a base.
+Runs btsync within a docker container using ubuntu 14.0.4 as a base.
 
-## Setup
-In progreess
+Uses the web interface for config. And will store your sync data on the host so you can rebuild the image without loosing anything.
 
-## Build the dev image from docker file
+## Run the Container
 
-    $ docker build -t montag451/btsync .
-
-## Run the dev container
-    
-    $ docker run -it --rm --name="btsync" \
-        -v ~/.docker_data/docker-btsync/data:/data \
-        -p 8888:8888 \
-        -p 3838:3838 \
-        montag451/docker-btsync:latest
-
-## Run the Container for real
+This will run the container as in the background. If you want to use another port, you will have to modify the *btsync.conf* file and rebuild the image.
 
     $ docker run -d --name="btsync" \
-        -v ~/.docker_data/docker-btsync/data:/data \
+        -v $HOME/.docker_btsync:/data \
         -p 8888:8888 \
-        -p 3838:3838 \
         montag451/docker-btsync:latest
