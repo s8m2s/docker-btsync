@@ -1,0 +1,21 @@
+#!/bin/bash
+
+mkdir /data/.sync
+
+# Create the btsync.conf file
+echo "{
+    \"device_name\": \"BTSync Sync Server\",
+    \"storage_path\": \"/data/.sync\",
+    \"pid_file\": \"/var/run/btsync/btsync.pid\",
+    \"check_for_updates\": true,
+    \"use_upnp\": false,
+    \"download_limit\": 0,
+    \"upload_limit\": 0,
+    \"listening_port\": 3838,
+    \"webui\": {
+        \"listen\": \"0.0.0.0:8888\"
+    }
+}" > /btsync/btsync.conf
+
+# Run btsync using the btsync.conf file we just created
+btsync --config /btsync/btsync.conf --nodaemon
