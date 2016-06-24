@@ -14,7 +14,7 @@ In progreess
         -v ~/.docker_data/docker-btsync/data:/data \
         -p 8888:8888 \
         -p 3838:3838 \
-        montag451/btsync
+        montag451/docker-btsync:latest
 
 ## Run the Container for real
 
@@ -22,4 +22,4 @@ In progreess
         -v ~/.docker_data/docker-btsync/data:/data \
         -p 8888:8888 \
         -p 3838:3838 \
-        montag451/btsync
+        montag451/docker-btsync:latest
