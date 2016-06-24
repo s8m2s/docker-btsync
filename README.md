@@ -6,19 +6,19 @@ In progreess
 
 ## Build the dev image from docker file
 
-    $ docker build -t montag451/btsync:dev .
+    $ docker build -t montag451/btsync .
 
 ## Run the dev container
     
-    $ docker run -it --rm --name="btsync-dev" \
+    $ docker run -it --rm --name="btsync" \
         -v ~/.docker_data/docker-btsync/data:/data \
         -p 8888:8888 \
         -p 3838:3838 \
-        montag451/btsync:dev
+        montag451/btsync
 
 ## Run the Container for real
 
-    $ docker run -d --name="btsync-dev" \
+    $ docker run -d --name="btsync" \
         -v ~/.docker_data/docker-btsync/data:/data \
         -p 8888:8888 \
         -p 3838:3838 \
