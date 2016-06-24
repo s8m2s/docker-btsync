@@ -10,8 +10,7 @@ RUN tar -xzvf /tmp/btsync.tar.gz -C /usr/bin/ btsync \
 
 # Make Directory's
 RUN mkdir -p \
-	/data \
-	/btsync/.sync \
+	/data/.sync \
 	/var/run/btsync
 
 
