@@ -7,8 +7,10 @@ Uses the web interface for config. And will store your sync data on the host so 
 
 This will run the container as in the background. If you want to use another port, you will have to modify the *btsync.conf* file and rebuild the image.
 
-    $ docker run -d --name="btsync" \
-        -v $HOME/.docker_btsync:/data \
+    $ docker run -d \
+        --name="btsync" \
+        --restart=always \
+        -v $HOME/btsync:/data \
         -p 8888:8888 \
         -p 55555:55555 \
         montag451/docker-btsync:latest
