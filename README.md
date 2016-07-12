@@ -18,7 +18,7 @@ This will run the container as in the background. If you want to use another por
 
 * `--restart=always` - use if you want to have the container restart after system reboot or if the contain dies for some reason.
 
-* `-v $HOME/btsync:/data` - puts the data from the container a dir called btsync in the users home directory, you can change that to whatever you want.
+* `-v /btsync:/data` - puts the data from the container a dir called btsync, you can change that to whatever you want.
 
 
 ## Configure BitTorrent Sync
